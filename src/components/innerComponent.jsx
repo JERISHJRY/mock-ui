@@ -76,7 +76,7 @@ const SimpleCard = () => {
             <div className="carouselButton rht20 left">
                 <button onClick={()=> goBackward()}><KeyboardBackspaceIcon/></button>
             </div>
-            <Card className='card_size' >
+            <Card className='card_size1 left' >
                     <CardMedia className='image_div'>
                         <img src={Data[previousIndex].image} alt='image not found'></img>
                     </CardMedia>
@@ -88,7 +88,7 @@ const SimpleCard = () => {
                     </CardContent>
             </Card>    
 
-                <Card className='card_size' >
+                <Card className='card_size left' >
                     <CardMedia className='image_div'>
                         <img src={Data[currentIndex].image} alt='image not found'></img>
                     </CardMedia>
@@ -122,7 +122,7 @@ const SimpleCard = () => {
                     </CardActions>
                 </Card>
 
-                <Card className='card_size' >
+                <Card className='card_size2 left' >
                     <CardMedia className='image_div'>
                         <img src={Data[nextIndex].image} alt='image not found'></img>
                     </CardMedia>

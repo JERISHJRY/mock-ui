@@ -18,13 +18,11 @@ code {
 body{
   margin: 0px 0px;
 }
-.card_size{
+.card_size,.card_size1,.card_size2{
   width:20%;
-  float: left;
- 
-border-radius: 0px;
+  border-radius: 0px;
 }
-.card_size img{
+.card_size img,.card_size1 img , .card_size2 img{
   width: 150px;
   height: 100px;
 
@@ -87,8 +85,7 @@ padding: 3px 10px 10px 3px;
 
 .inner_container{
   padding-left:20px;
-  display: flex;
-  justify-content: center;
+  
 }
 
 .carouselButton button{
@@ -108,4 +105,8 @@ padding: 3px 10px 10px 3px;
 .lf20{
   margin-left: 50px;
   margin-top: 15%;
+}
+
+.left {
+  float: left;
 }
