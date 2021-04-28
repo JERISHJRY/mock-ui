@@ -13,9 +13,10 @@ code {
 }
 .App {
   text-align: center;
+  background-color: #23262d;
 }
 body{
-  margin: 40px 0px;
+  margin: 0px 0px;
 }
 .card_size{
   width:20%;
@@ -68,11 +69,7 @@ padding: 3px 10px 10px 3px;
   padding-top:40px;
 
 }
-.inner_container{
-  padding-left:20px;
-  display: flex;
-justify-content: center;
-}
+
 .image_div{
   padding: 60px 2px;
   background-color: #f33a59
@@ -86,4 +83,29 @@ justify-content: center;
 }
 .action_btn{
   justify-content: center !important;
+}
+
+.inner_container{
+  padding-left:20px;
+  display: flex;
+  justify-content: center;
+}
+
+.carouselButton button{
+  color: #FC3D5E;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: #FC3D5E;
+  background-color: #303447;
+}
+
+.rht20{
+  margin-right: 50px;
+  margin-top: 15%;
+}
+
+.lf20{
+  margin-left: 50px;
+  margin-top: 15%;
 }
