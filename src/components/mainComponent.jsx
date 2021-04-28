@@ -1,6 +1,7 @@
 import React from 'react';
 import SimpleCard from './innerComponent';
 import CardContent from '@material-ui/core/CardContent';
+import { Button } from '@material-ui/core';
 
 const   MainComponent=()=> {
   return (
@@ -11,6 +12,12 @@ const   MainComponent=()=> {
             enterpreneurs to Fortune 500s
         </CardContent>
       <SimpleCard/>
+      <div className="clear"></div>
+            <Button className='btns'>
+                {' '}
+                <>View all products</>
+            </Button>
+            
     </div>
   );
 }

@@ -1,7 +1,6 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin: 40px 0px;
+  font-family: 
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,10 +12,14 @@ code {
 }
 .App {
   text-align: center;
-  background-color: #23262d;
+
 }
-body{
-  margin: 0px 0px;
+
+.card_size{
+  width:20%;
+  float: left;
+ margin: 0px 5px;
+border-radius: 0px;
 }
 .card_size,.card_size1,.card_size2{
   width:20%;
@@ -65,6 +68,8 @@ padding: 3px 10px 10px 3px;
 }
 .main_headerhead{
   padding-top:40px;
+font-size:41px;
+margin-bottom: 13px !important;
 
 }
 
@@ -79,15 +84,27 @@ padding: 3px 10px 10px 3px;
   border-radius: 20px !important;
   font-size: 10px !important;
 }
+.btns{background-color: #f33a59 !important;
+  color: whitesmoke !important;
+  border-radius: 20px !important;
+  font-size: 10px !important;
+padding:5px !important;
+margin:40px 0px !important;}
 .action_btn{
   justify-content: center !important;
 }
-
+.clear{
+  clear: both;
+}
 .inner_container{
   padding-left:20px;
-  
+  width:fit-content;
+  margin: 0 auto;
 }
-
+.card_container,.carouselButton{
+  position: relative;
+  left:10%;
+}
 .carouselButton button{
   color: #FC3D5E;
   height: 40px;

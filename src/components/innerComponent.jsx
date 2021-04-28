@@ -23,119 +23,127 @@ const SimpleCard = () => {
         setShow(false);
     };
 
-    const goBackward = () =>{
-        let length = Data.length - 1
-        if( previousIndex == 0 ){
-            setCurrentIndex( currentIndex - 1 )
-            setPreviousIndex( length )
-            setNextIndex( nextIndex -1 )
+    const goBackward = () => {
+        let length = Data.length - 1;
+        if (previousIndex == 0) {
+            setCurrentIndex(currentIndex - 1);
+            setPreviousIndex(length);
+            setNextIndex(nextIndex - 1);
+        } else {
+            setPreviousIndex(previousIndex - 1);
+            if (currentIndex == 0) {
+                setCurrentIndex(length);
+            } else {
+                setCurrentIndex(currentIndex - 1);
+            }
+            if (nextIndex == 0) {
+                setNextIndex(length);
+            } else {
+                setNextIndex(nextIndex - 1);
+            }
         }
-        else{
-            setPreviousIndex( previousIndex - 1 )
-            if( currentIndex == 0 ){
-                setCurrentIndex( length )
-            }
-            else{
-                setCurrentIndex( currentIndex - 1 )
-            }
-            if( nextIndex == 0 ){
-                setNextIndex( length )
-            }
-            else{
-                setNextIndex( nextIndex - 1 )
-            }
-        } 
-    }
+    };
 
-    const goForward = () =>{
-        let length = Data.length - 1
-        if( currentIndex == length ){
-            setCurrentIndex( 0 )
-            setPreviousIndex( length )
-            setNextIndex( 1 )
+    const goForward = () => {
+        let length = Data.length - 1;
+        if (currentIndex == length) {
+            setCurrentIndex(0);
+            setPreviousIndex(length);
+            setNextIndex(1);
+        } else {
+            setCurrentIndex(currentIndex + 1);
+            if (previousIndex == length) {
+                setPreviousIndex(0);
+            } else {
+                setPreviousIndex(previousIndex + 1);
+            }
+            if (nextIndex == length) {
+                setNextIndex(0);
+            } else setNextIndex(nextIndex + 1);
         }
-        else{
-            setCurrentIndex( currentIndex + 1 )
-            if( previousIndex == length ){
-                setPreviousIndex(0)
-            }
-            else{
-                setPreviousIndex( previousIndex + 1 )
-            }            
-            if( nextIndex == length ){
-                setNextIndex(0)
-            }
-            else(
-                setNextIndex( nextIndex + 1 )
-            )
-        } 
-    }
+    };
 
     return (
-        <div className='inner_container'>
-            <div className="carouselButton rht20 left">
-                <button onClick={()=> goBackward()}><KeyboardBackspaceIcon/></button>
-            </div>
-            <Card className='card_size1 left' >
-                    <CardMedia className='image_div'>
-                        <img src={Data[previousIndex].image} alt='image not found'></img>
-                    </CardMedia>
+        <div className='inner_container container'>
 
-                    <h3 className='CardHeader'>{Data[previousIndex].title}</h3>
+            <div className='carouselButton rht20 left'>
+                <button onClick={() => goBackward()}>
+                    <KeyboardBackspaceIcon />
+                </button>
+            </div>
+            <div className="card_container">
+            <Card className='card_size1 left '>
+                <CardMedia className='image_div'>
+                    <img
+                        src={Data[previousIndex].image}
+                        alt='image not found'></img>
+                </CardMedia>
+
+                <h3 className='CardHeader'>{Data[previousIndex].title}</h3>
+                <CardContent className={'cardcontent'}>
+                    {' '}
+                    {Data[previousIndex].details}
+                </CardContent>
+            </Card>
+
+            <Card className='card_size left'>
+                <CardMedia className='image_div'>
+                    <img
+                        src={Data[currentIndex].image}
+                        alt='image not found'></img>
+                </CardMedia>
+
+                <h3 className='CardHeader'>{Data[currentIndex].title}</h3>
+                {!show ? (
                     <CardContent className={'cardcontent'}>
                         {' '}
-                        {Data[previousIndex].details}
+                        {Data[currentIndex].details}
                     </CardContent>
-            </Card>    
-
-                <Card className='card_size left' >
-                    <CardMedia className='image_div'>
-                        <img src={Data[currentIndex].image} alt='image not found'></img>
-                    </CardMedia>
-
-                    <h3 className='CardHeader'>{Data[currentIndex].title}</h3>
+                ) : (
+                    <span className={'cardcontent1'}>
+                        {Data[currentIndex].details}
+                    </span>
+                )}
+                <CardActions className='action_btn'>
                     {!show ? (
-                        <CardContent className={'cardcontent'}>
-                            {' '}
-                            {Data[currentIndex].details}
-                        </CardContent>
+                        <Button
+                            onClick={handleOnclick}
+                            className='button-style'>
+                            <>Read More</>
+                            <i className='fa fa-angle-right'></i>
+                        </Button>
                     ) : (
-                        <span className={'cardcontent1'}>{Data[currentIndex].details}</span>
-                    )}
-                    <CardActions className='action_btn'>
-                        {!show ? (
-                            <Button
-                                onClick={handleOnclick}
-                                className='button-style'>
-                                <>Read More</>
-                                <i className='fa fa-angle-right'></i>
-                            </Button>
-                        ) : (
-                            <Button
-                                onClick={handleOnclickLess}
-                                className='button-style'>
-                                {' '}
-                                <>Read Less</>
-                                <i className='fa fa-angle-right'></i>
-                            </Button>
-                        )}
-                    </CardActions>
-                </Card>
-
-                <Card className='card_size2 left' >
-                    <CardMedia className='image_div'>
-                        <img src={Data[nextIndex].image} alt='image not found'></img>
-                    </CardMedia>
-
-                    <h3 className='CardHeader'>{Data[nextIndex].title}</h3>
-                    <CardContent className={'cardcontent'}>
+                        <Button
+                            onClick={handleOnclickLess}
+                            className='button-style'>
                             {' '}
-                            {Data[nextIndex].details}
-                    </CardContent>
-                </Card>
-            <div className="carouselButton lf20 left">
-                <button onClick={()=> goForward()}>< ArrowRightAltIcon /></button>
+                            <>Read Less</>
+                            <i className='fa fa-angle-right'></i>
+                        </Button>
+                    )}
+                </CardActions>
+            </Card>
+
+            <Card className='card_size2 left'>
+                <CardMedia className='image_div'>
+                    <img
+                        src={Data[nextIndex].image}
+                        alt='image not found'></img>
+                </CardMedia>
+
+                <h3 className='CardHeader'>{Data[nextIndex].title}</h3>
+                <CardContent className={'cardcontent'}>
+                    {' '}
+                    {Data[nextIndex].details}
+                </CardContent>
+            </Card>
             </div>
+            <div className='carouselButton lf20 left'>
+                <button onClick={() => goForward()}>
+                    <ArrowRightAltIcon />
+                </button>
+            </div>
+            <div className="clear"></div>
         </div>
     );
 };
