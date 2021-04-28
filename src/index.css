@@ -12,7 +12,7 @@ code {
 }
 .App {
   text-align: center;
-  background-color: #23262d;
+
 }
 
 .card_size{
@@ -98,9 +98,13 @@ margin:40px 0px !important;}
 }
 .inner_container{
   padding-left:20px;
-
+  width:fit-content;
+  margin: 0 auto;
 }
-
+.card_container,.carouselButton{
+  position: relative;
+  left:10%;
+}
 .carouselButton button{
   color: #FC3D5E;
   height: 40px;

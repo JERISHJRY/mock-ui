@@ -65,11 +65,13 @@ const SimpleCard = () => {
 
     return (
         <div className='inner_container container'>
+
             <div className='carouselButton rht20 left'>
                 <button onClick={() => goBackward()}>
                     <KeyboardBackspaceIcon />
                 </button>
             </div>
+            <div className="card_container">
             <Card className='card_size1 left '>
                 <CardMedia className='image_div'>
                     <img
@@ -135,11 +137,13 @@ const SimpleCard = () => {
                     {Data[nextIndex].details}
                 </CardContent>
             </Card>
+            </div>
             <div className='carouselButton lf20 left'>
                 <button onClick={() => goForward()}>
                     <ArrowRightAltIcon />
                 </button>
             </div>
+            <div className="clear"></div>
         </div>
     );
 };
