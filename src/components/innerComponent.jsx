@@ -11,8 +11,9 @@ import Data from './Data.json';
 const SimpleCard = () => {
     const [show, setShow] = useState(false);
 
-    const handleOnclick = () => {
+    const handleOnclick = (i) => {
         setShow(true);
+        console.log(i)
     };
     const handleOnclickLess = () => {
         setShow(false);
@@ -38,7 +39,7 @@ const SimpleCard = () => {
                     <CardActions className='action_btn'>
                         {!show ? (
                             <Button
-                                onClick={handleOnclick}
+                                onClick={()=>handleOnclick(i)}
                                 className='button-style'>
                                 <>Read More</>
                                 <i className='fa fa-angle-right'></i>
@@ -55,6 +56,7 @@ const SimpleCard = () => {
                     </CardActions>
                 </Card>
             ))}
+            
         </div>
     );
 };
