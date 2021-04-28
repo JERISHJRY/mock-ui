@@ -12,6 +12,7 @@ code {
 }
 .App {
   text-align: center;
+  background-color: #23262d;
 }
 
 .card_size{
@@ -20,7 +21,11 @@ code {
  margin: 0px 5px;
 border-radius: 0px;
 }
-.card_size img{
+.card_size,.card_size1,.card_size2{
+  width:20%;
+  border-radius: 0px;
+}
+.card_size img,.card_size1 img , .card_size2 img{
   width: 150px;
   height: 100px;
 
@@ -67,11 +72,7 @@ font-size:41px;
 margin-bottom: 13px !important;
 
 }
-.inner_container{
-  padding-left:20px;
-  display: flex;
-justify-content: center;
-}
+
 .image_div{
   padding: 60px 2px;
   background-color: #f33a59
@@ -94,4 +95,31 @@ margin:40px 0px !important;}
 }
 .clear{
   clear: both;
+}
+.inner_container{
+  padding-left:20px;
+
+}
+
+.carouselButton button{
+  color: #FC3D5E;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: #FC3D5E;
+  background-color: #303447;
+}
+
+.rht20{
+  margin-right: 50px;
+  margin-top: 15%;
+}
+
+.lf20{
+  margin-left: 50px;
+  margin-top: 15%;
+}
+
+.left {
+  float: left;
 }
