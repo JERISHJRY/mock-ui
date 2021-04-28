@@ -1,21 +1,16 @@
 import React from 'react';
-
-import Posts from './posts/Posts';
-import PostForm from './posts/PostForm';
-
-import { Provider } from 'react-redux';
-import store from '../store';
+import '../index.css';
+import OuterComponent from './outerContainer';
 
 function App() {
   return (
-    <Provider store={store}>
-      <div>
-          <PostForm />
-          <hr />
-          <Posts />
-        </div>
-    </Provider>
+    <div className="App">
+      <OuterComponent/>
+    </div>
   );
 }
 
 export default App;
+ 
+
+

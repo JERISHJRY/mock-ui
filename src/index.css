@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  text-align: center;
+}
+body{
+  margin: 40px 0px;
+}
+.card_size{
+  width:20%;
+  float: left;
+ 
+border-radius: 0px;
+}
+.card_size img{
+  width: 150px;
+  height: 100px;
+
+}
+.CardHeader{
+color: #23262d;
+font-size: 22px;
+font-weight: 800;
+margin-top: 22px;
+}
+.cardcontent{
+ /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height:90px;
+  color: #aaacae;
+font-size: 12px;
+margin:5px 20px;
+}
+.cardcontent1{
+  color: #aaacae;
+  font-size: 12px;
+  margin:5px 20px;
+  padding:5px 20px;
+}
+.maincompo{
+  width: auto;
+  background-color: #23262d;
+  color: aliceblue;
+  height:auto;
+  padding: 20px;
+}
+.outer_container{
+  background-color: rgb(160, 206, 233);
+  height:605px;
+padding: 3px 10px 10px 3px;
+}
+.main_header{
+  padding:3px;
+}
+.main_headerhead{
+  padding-top:40px;
+
+}
+.inner_container{
+  padding-left:20px;
+  display: flex;
+justify-content: center;
+}
+.image_div{
+  padding: 60px 2px;
+  background-color: #f33a59
+
+}
+.button-style{
+  background-color: #f33a59 !important;
+  color: whitesmoke !important;
+  border-radius: 20px !important;
+  font-size: 10px !important;
+}
+.action_btn{
+  justify-content: center !important;
+}
