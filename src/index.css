@@ -12,7 +12,6 @@ code {
 }
 .App {
   text-align: center;
-
 }
 
 .card_size{
@@ -122,6 +121,12 @@ margin:40px 0px !important;}
 .lf20{
   margin-left: 50px;
   margin-top: 15%;
+}
+.card_size{
+  padding-bottom: 25px;
+}
+.card_size2,.card_size1{
+  margin-top: 20px;
 }
 
 .left {
