@@ -138,8 +138,8 @@ const SimpleCard = () => {
                 </CardContent>
             </Card>
             </div>
-            <div className='carouselButton lf20 left'>
-                <button onClick={() => goForward()}>
+            <div className='carouselButton lf20 left right_button'>
+                <button onClick={() => goForward()} className="right_btn">
                     <ArrowRightAltIcon />
                 </button>
             </div>
